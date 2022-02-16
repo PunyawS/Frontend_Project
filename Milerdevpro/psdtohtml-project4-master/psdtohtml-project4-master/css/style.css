@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    font-family: 'Lato', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.container {
+    max-width: 1000px;
+    width: 98%;
+    margin: 0 auto;
+}
+
+/***************** Header  ******************/
+
+header {
+    width: 100%;
+    height: 600px;
+    background: url("../img/header-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-tab {
+    width: 90px;
+    height: 70px;
+    position: absolute;
+    z-index: 100;
+    top: 0px;
+    right: 10%;
+    cursor: pointer;
+    transition: .6s;
+}
+.menu-tab div {
+    width: 33px;
+    height: 4px;
+    background-color: #fff;
+    display: block;
+    margin: 5px 28px;
+    transition: .6s;
+}
+.menu-tab div:nth-child(1) {
+    margin-top: 20px;
+}
+.menu-tab.active {
+    right: 345px;
+    transition: .6s;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu-hide {
+    width: 345px;
+    right: -345px;
+    height: 100vh;;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    transition: .6s;
+}
+.menu-hide ul li {
+    height: 70px;
+    list-style: none;
+    text-align: center;
+    line-height: 70px;
+    transition: .5s;
+}
+.menu-hide ul li:hover {
+    background: #fd4f32;
+}
+.menu-hide ul li a {
+    padding: 30px 25px;
+    text-decoration: none;
+    color: #f1f1f1;
+    font-weight: 700;
+}
+.menu-hide.show {
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: .6s;
+}
+
+.header_search {
+    display: flex;
+    height: 535px;
+    justify-content: center;
+    align-items: center;
+}
+.search_box {
+    text-align: center;
+}
+.search_box h1 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 4rem;
+}
+.search_bar {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+}
+.search_bar input, .search_bar button {
+    border: none;
+    outline: none;
+    padding: 1em 3em;
+    cursor: pointer;
+}
+.search_bar button {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: #fd4f32;
+    transition: .4s
+}
+.search_bar button:hover {
+    background: #da452c;
+}
+
+/***************** destinations  ******************/
+
+.destinations {
+    width: 100%;
+    height: 525px;
+    background: #eee;
+    overflow: hidden;
+}
+.destinations_title {
+    margin-top: 3em;
+}
+.destinations_title h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.destinations_title p {
+    margin-top: .5em;
+    color: #8b8b8b;
+}
+
+.destinations_grid {
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1em;
+}
+.destinations_items figure {
+    position: relative;
+}
+.destinations_items figure span.price {
+    font-size: .8em;
+    position: absolute;
+    top: 170px;
+    right: 20px;
+    color: #fff;
+}
+.destinations_items figure img {
+    width: 100%;
+}
+.destinations_items figure figcaption {
+    padding: .8em;
+    height: 120px;
+    background: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.destinations_items figure figcaption h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.destinations_items figure figcaption p {
+    font-size: .9em;
+    color: #8b8b8b;
+    margin-top: .8em;
+    line-height: 1.5;
+}
+
+/***************** before_leave  ******************/
+.before_leave {
+    width: 100%;
+    height: 540px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.before_leave_c {
+    margin-top: 4em;
+}
+.before_leave_c h1 {
+    font-size: 4em;
+    font-weight: 300;
+}
+
+.before_leave_grid {
+    margin-top: 4em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 3em;
+}
+.before_leave_items h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.before_leave_items p {
+    margin-top: 1em;
+    color: #8b8b8b;
+    line-height: 1.5;
+}
+
+.subscribe {
+    margin-top: 5em;
+    text-align: center;
+}
+.subscribe h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.subscribe_box {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+.subscribe_box input, .subscribe_box button {
+    border: none;
+    outline: none;
+    padding: 1em 3em;
+    cursor: pointer;
+}
+.subscribe_box input {
+    background: #eee;
+}
+.subscribe_box button {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #fd4f32;
+    transition: .4s;
+}
+.subscribe_box button:hover {
+    background: #da452c;
+}
+
+/***************** footer  ******************/ 
+
+footer {
+    width: 100%;
+    height: 75px;
+    background: #eee;
+}
+
+.footer_copy {
+    display: flex;
+    height: 75px;
+    justify-content: space-between;
+    align-items: center;
+}
+.copyright {
+    color: #8b8b8b;
+}
+ul.footer_menu {
+    display: flex;
+}
+ul.footer_menu li {
+    margin-right: 1em;
+}
+ul.footer_menu li a {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    transition: .4s;
+}
+ul.footer_menu li a:hover {
+    color: #666;
+}
+
+@media screen and (max-width: 768px) {
+
+    .logo {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .destinations {
+        height: auto;
+        padding-bottom: 4em;
+    }
+    .destinations_grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .destinations_items figure span.price {
+        top: 275px;
+    }
+
+    .before_leave {
+        height: auto;
+        padding-bottom: 4em;
+    }
+
+    footer {
+        text-align: center;
+        height: auto;
+        padding: 2em 0;
+    }
+    .footer_copy {
+        height: 50px;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer_copy {
+        height: 65px;
+    }
+}
